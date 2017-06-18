@@ -1,14 +1,14 @@
 # amazon-films-api
-Necessary information of any movie in Amazon, in JSON format, written in Go!
+Necessary information of any movie in Amazon, in JSON format, written in Go. Will be developed further.
 
 ### How to set up? ###
 * **Summary of set up**  
 `go get ./..`  
 change directory to project's folder  
-`go build -o "scraper"`  
-`./scraper`  
+`go build -o "films-api"`  
+`./films-api`  
 
-Now you have a working scraper where you can make requests from your favorite web browser.  
+Now you have a working Amazon films api where you can make requests from your favorite web browser.  
 
 * **Dependencies**  
 [goquery](https://github.com/PuerkitoBio/goquery): is used to fetch the needed parts of the movie webpage, in an easy manner.  
@@ -16,10 +16,10 @@ Now you have a working scraper where you can make requests from your favorite we
 
 ### How to use? ###
 
-Depending on the Amazon's region of the movie ID - com, co.uk and de works fine for this implementation - specify the region and the movie ID to the link in your browser. Since hardcoding amazon.de for the base url region wouldn't give correct results for all, specifying the region in the link seemed to provide easier usage.
+Depending on the Amazon's region of the movie ID - com, co.uk and de works fine for this implementation - specify the region and the movie ID to the link in your browser. Since hardcoding amazon.de for the base url region wouldn't give correct results for every region, specifying the region in the link seems to provide easier usage.
   
-**Sample execution: ** http://localhost:8080/movie/amazon/de/B00K19SD8Q   
-**Result: **   
+**Sample execution:** http://localhost:8080/movie/amazon/de/B00K19SD8Q   
+**Result:**   
 {  
 &nbsp;&nbsp;&nbsp;&nbsp;"title":"Um Jeden Preis",  
 &nbsp;&nbsp;&nbsp;&nbsp;"release_year":2013,  
@@ -53,6 +53,10 @@ Depending on the Amazon's region of the movie ID - com, co.uk and de works fine 
 &nbsp;&nbsp;&nbsp;&nbsp;]  
 }  
   
-**Sample execution 2: ** http://localhost:8080/movie/amazon/co.uk/B00HDMDADW
+**Sample execution 2:**  http://localhost:8080/movie/amazon/co.uk/B00HDMDADW
 
-**Sample execution 3: ** http://localhost:8080/movie/amazon/com/B0018OFN1S
+**Sample execution 3:**  http://localhost:8080/movie/amazon/com/B0018OFN1S
+
+### TODO ###  
+- RESTful request handling.  
+- ID validation  
